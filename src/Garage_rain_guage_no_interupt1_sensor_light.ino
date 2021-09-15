@@ -74,8 +74,7 @@ void callback(String topic, byte* message, unsigned int length) {
   }
   Serial.println();
 
-void reconnect() 
-{
+void reconnect(){
   // Loop until we're reconnected
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
@@ -108,9 +107,8 @@ void reconnect()
     }
   }
 }
- 
-void setup()
-{
+
+void setup(){
 
   pinMode(3, INPUT_PULLUP);           //PIR pin
 
@@ -154,7 +152,7 @@ void setup()
                                       //Blynk.begin(auth, "blynk-cloud.com", 80);
                                       //Blynk.begin(auth, IPAddress(192,168,1,100), 8080);
                  
- }
+}
 
 void loop()
 {
@@ -281,8 +279,8 @@ BLYNK_WRITE(V22){
       Blynk.virtualWrite(V25, Total/conversion);         //convert Total to mm of rain
      rainCounter=0;
  
- }
- BLYNK_WRITE(V23){
+}
+BLYNK_WRITE(V23){
  
  int pinValue = param.asInt();
  
@@ -296,4 +294,4 @@ BLYNK_WRITE(V22){
       Blynk.virtualWrite(V24, rainYesterday/conversion); //convert rainYesterday to mm of rain
       Blynk.virtualWrite(V25, Total/conversion);         //convert Total to mm of rain
  
- }      
+}
