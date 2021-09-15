@@ -5,10 +5,15 @@
 
 
 #include <SPI.h>
+
 #include <Ethernet.h>
+
 #include <BlynkSimpleEthernet.h>
+
 #include <Wire.h>
+
 #include <DFRobot_SHT20.h>
+
 
 DFRobot_SHT20    sht20;
 
